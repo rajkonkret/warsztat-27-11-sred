@@ -42,3 +42,4 @@ print(zbior)  # {77, 55}
 # update() - modyfikuje bazowy zbiór
 zbior.update(zbior_liczb)
 print(zbior)  # {66, 999, 11, 77, 44, 18, 55, 62}
+# 14:45
