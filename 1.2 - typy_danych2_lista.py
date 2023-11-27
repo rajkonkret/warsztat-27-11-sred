@@ -60,6 +60,48 @@ print(id(lista))  # 2356439240192
 print(id(lista_copy_ok))  # 2356441675072
 print(lista_copy_ok)  # ['Grzegorz', 'Radek', 'Zenek']
 
+liczby = [54, 999, 34, 22, 12.34, 876]
+# liczby = [54, 999, 34, 22, 12.34, 876, "A"]  # TypeError: '<' not supported between instances of 'str' and 'int'
 
+print(liczby)
+liczby.sort()
+print(liczby)  # [12.34, 22, 34, 54, 876, 999]
 
+lista_liata = [1, 2, 3, [1, 2, 3]]
+print(lista_liata)  # [1, 2, 3, [1, 2, 3]]
+# numpy - dedykowana do operacji na tablicach
 
+print(liczby[0:3])  # [12.34, 22, 34]
+liczby.append(4)
+liczby.remove(34)
+liczby.insert(1, 46)
+print(liczby)  # [12.34, 46, 22, 54, 876, 999, 4]
+
+print(lista_liata[3])  # [1, 2, 3]
+print(lista_liata[3][1])  # 2
+
+lista3 = ['a', 'b', 'c']
+lista4 = ["1", "2", "3"]
+lista3.extend(lista4)
+print(lista3)  # ['a', 'b', 'c', '1', '2', '3']
+lista5 = "definicja"
+lista3.extend(lista5)
+print(lista3)
+# ['a', 'b', 'c', '1', '2', '3', 'd', 'e', 'f', 'i', 'n', 'i', 'c', 'j', 'a']
+# rozpakowanie sekwencji
+
+tekst = "Python"
+lista_z_tekstu = list(tekst)  # -> extend()
+print(lista_z_tekstu)  # ['P', 'y', 't', 'h', 'o', 'n']
+
+lista6 = [tekst]  # append()
+print(lista6)  # ['Python']
+
+liczby = 1234  # int()
+liczby3 = []
+liczby3.extend(str(liczby))  # zamiana na string str()
+print(liczby3)  # ['1', '2', '3', '4']
+
+krotka = tuple(liczby3)
+print(type(krotka))  # <class 'tuple'>
+print(krotka)  # ('1', '2', '3', '4')
