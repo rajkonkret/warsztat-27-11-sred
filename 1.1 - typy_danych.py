@@ -145,18 +145,38 @@ print(f"Nasza duża liczba {liczba:,}".replace(",", " "))  # Nasza duża liczba 
 liczba2 = 1111112.768
 print(f"Nasza duża liczba {liczba2:,}".replace(",", " "))  # Nasza duża liczba 1 111 112.768
 
+# typ logiczny
+# przyjmuje wartości: prawda lub fałsz
+czy_znasz_python = True  # prawda
+czy_znasz_python = False  # fałsz
+print(czy_znasz_python)  # False
+print(int(czy_znasz_python))  # 0
+print(int(True))  # 1
+print(bool(1))  # True bool() - zamiana na typ bool() - logiczny
+print(bool(100))  # True
+print(bool(-10))
+print(bool("Radek"))  # True
+print(bool(0))  # False
+print(bool(""))  # False
+print(bool(None))  # False -> None - nic, null
+# komentarz
+"""
+Komentarz wielolinijkowy
+"""
 
-
-
-
-
-
-
-
-
-
-
-
+tekst = "    Tekst   "
+print(tekst.strip())  # "Tekst" czysci białe znaki na początku i na końcu
+print(tekst.lstrip())  # "Tekst   "
+tekst_x = "witaj świecie"
+encoded_s = tekst_x.encode('utf-8')
+print(encoded_s)  # b'witaj \xc5\x9bwiecie'
+print(type(encoded_s))  # typ bajtowy, b - typ bajtowy
+# \x - zapis w postaci szesnastkowej
+# \xc5 = 197
+print(encoded_s.decode('utf-8'))  # witaj świecie
+print(ord("1"))  # 49
+print(chr(49))
+print("\u0105")  # ą
 
 
 
