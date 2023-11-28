@@ -1,5 +1,7 @@
 # lambda - skrócony zapis funkcji
 # mozliwosc zadeklarowania w miejscu uzycia
+from functools import reduce
+
 
 def liczymy(x, y):
     return x * y
@@ -54,3 +56,25 @@ print(r1)
 # {'miasto': 'Kielce', 'ZIP': '00-000'}
 # {'miasto': 'Kielce', 'ZIP': '25-900'}
 # 11:30
+
+lata = [(2000, 29.7), (2001, 33.12), (2010, 32.92)]
+print(max(lata))  # (2010, 32.92) -> c[1] -> 32.92
+print(max(lata, key=lambda c: c[1]))  # (2001, 33.12)
+print(max(map(lambda c: (c[1], c), lata)))  # (33.12, (2001, 33.12))
+print(max(map(lambda c: (c[1], c[0]), lata)))  # (33.12, 2001)
+print(lata)  # [(2000, 29.7), (2001, 33.12), (2010, 32.92)]
+
+
+def iloczyn(a, b):
+    return a * b
+
+
+def suma(a, b):
+    return a + b
+
+
+liczby = [1, 2, 3, 4, 5]
+wynik = reduce(iloczyn, liczby)
+print(wynik)  # 120
+print(reduce(suma, liczby))
+print(reduce(lambda a, b: a + b, liczby))  # 15
