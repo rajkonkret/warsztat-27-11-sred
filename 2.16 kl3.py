@@ -1,4 +1,7 @@
 # dziedziczenie
+from pprint import pprint
+
+
 class ContactList(list['Contact']):
     def search(self, name):
         matching_contacts = []
@@ -71,3 +74,11 @@ print(Friend.__mro__)
 f1 = Friend("Jarek", "jarek@wp.pl", "657876543")
 print(f1)  # Friend 'Jarek' 'jarek@wp.pl', +48 '657876543'
 f1.order("herbata")
+print(f1)
+pprint(f1)
+pprint(Contact.all_contacts)
+# [Contact 'Adam' 'admin@wp.pl',
+#  Contact 'Radek' 'admin1@wp.pl',
+#  Contact 'Tomek' 'admin2@wp.pl',
+#  suplier,
+#  Friend 'Jarek' 'jarek@wp.pl', +48 '657876543']
