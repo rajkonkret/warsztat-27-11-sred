@@ -57,6 +57,28 @@ class Library:
     def fun_wypozyczone_ksiazki(self):
         return self.wypozyczone_ksiazki
 
+    def fun_znajdz_ksiazke(self, isbn):
+        # for book in self.dostepne_ksiazki:
+        #     if book.isbn == isbn:
+        #         return "Dostępne ksiązki", book
+        # for book in self.wypozyczone_ksiazki:
+        #     if book.isbn == isbn:
+        #         return "Wypożyczone ksiązki", book
+        dk, book = self.przeszukaj_liste(self.dostepne_ksiazki, isbn)
+        wk, book = self.przeszukaj_liste(self.wypozyczone_ksiazki, isbn)
+        if dk:
+            return book, "dostępne ksiąki"
+        elif wk:
+            return book, "wypozyczone ksiązki"
+        else:
+            raise Exception("Brak książki")
+
+    def przeszukaj_liste(self, lista, isbn):
+        for book in lista:
+            if book.isbn == isbn:
+                return True, book
+        return False, book
+
 
 biblioteka = Library()
 # biblioteka.fun_dodaj_ksiazke(Book("Programowanie w Pythonie", "Jan Kowalski", "1234567890"))
@@ -76,6 +98,7 @@ while True:
     print(f"""1. Dodaj ksiązke
 2. Wypożycz ksiązkę
 3. Pokaz dostępne
+4. Znajdz ksiazke
 5. Koniec
 """)
     odp = input("Podaj opcje")
@@ -87,6 +110,9 @@ while True:
         print("Ksiązka zostałą dodana")
     elif odp == "3":
         print(f"dostępne ksiązki {biblioteka.fun_dostepne_ksiazki()}")
+    elif odp == "4":
+        isbn = input("Podaj isbn")
+        print(f"Ksiązka jest w: {biblioteka.fun_znajdz_ksiazke(isbn)}")
     elif odp == "5":
         break
 # dodac uzytkownika
