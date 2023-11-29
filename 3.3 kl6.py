@@ -27,6 +27,7 @@ print(art)
 
 art['tomasz'] = 12
 art['abraham'] = 7
+art['siedema'] = 9
 art['radek'] = 3
 art['zen'] = 1
 print(art)
