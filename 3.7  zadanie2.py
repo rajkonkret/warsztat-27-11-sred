@@ -64,12 +64,12 @@ class Library:
         # for book in self.wypozyczone_ksiazki:
         #     if book.isbn == isbn:
         #         return "Wypożyczone ksiązki", book
-        dk, book = self.przeszukaj_liste(self.dostepne_ksiazki, isbn)
-        wk, book = self.przeszukaj_liste(self.wypozyczone_ksiazki, isbn)
+        dk, book_1 = self.przeszukaj_liste(self.dostepne_ksiazki, isbn)
+        wk, book_2 = self.przeszukaj_liste(self.wypozyczone_ksiazki, isbn)
         if dk:
-            return book, "dostępne ksiąki"
+            return book_1, "dostępne ksiąki"
         elif wk:
-            return book, "wypozyczone ksiązki"
+            return book_2, "wypozyczone ksiązki"
         else:
             raise Exception("Brak książki")
 
@@ -77,7 +77,7 @@ class Library:
         for book in lista:
             if book.isbn == isbn:
                 return True, book
-        return False, book
+        return False, None
 
 
 biblioteka = Library()
