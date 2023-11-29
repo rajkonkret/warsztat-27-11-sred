@@ -28,4 +28,3 @@ ob = Sample(1, 2, 3, 4, 5)
 print(ob)
 ob2 = Sample(1, 2, 3, 4)
 print(ob2)  # a= 1,b= 2,c= 3,d= 4,e=tekst
-
