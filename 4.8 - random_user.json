@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Monsieur",
+        "first": "Simon",
+        "last": "Roger"
+      },
+      "location": {
+        "street": {
+          "number": 943,
+          "name": "Rue de L'Abbaye"
+        },
+        "city": "Obergösgen",
+        "state": "Vaud",
+        "country": "Switzerland",
+        "postcode": 9140,
+        "coordinates": {
+          "latitude": "-62.3455",
+          "longitude": "-17.7022"
+        },
+        "timezone": {
+          "offset": "-12:00",
+          "description": "Eniwetok, Kwajalein"
+        }
+      },
+      "email": "simon.roger@example.com",
+      "login": {
+        "uuid": "ee018aef-4851-4ab0-9368-7428ecda159f",
+        "username": "happyleopard514",
+        "password": "carrot",
+        "salt": "sHtgORb1",
+        "md5": "5b89ba21c8e15d7061d4dcdfe8b6f8a3",
+        "sha1": "eb41998a72a24a21baf2df7a49660fb6675fd374",
+        "sha256": "e5a72cb47f00df4a3506ef37caa777bce33ffb495683b37768b7864e4474c9c1"
+      },
+      "dob": {
+        "date": "1959-11-21T04:08:36.008Z",
+        "age": 64
+      },
+      "registered": {
+        "date": "2005-07-14T08:13:19.520Z",
+        "age": 18
+      },
+      "phone": "078 860 36 92",
+      "cell": "075 039 98 82",
+      "id": {
+        "name": "AVS",
+        "value": "756.2376.9640.54"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/53.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/53.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/53.jpg"
+      },
+      "nat": "CH"
+    }
+  ],
+  "info": {
+    "seed": "ebc1a8e31f3d0101",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}
