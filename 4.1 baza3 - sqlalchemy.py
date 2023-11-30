@@ -70,3 +70,4 @@ obi1 = session.query(Person).filter(
 
 print(obi1)  # Obi(id=2)
 print(obi1.addresses)  # [obi@exmple.com, waka@wp.pl]
+#
