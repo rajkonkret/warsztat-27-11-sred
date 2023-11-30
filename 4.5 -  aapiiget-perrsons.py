@@ -7,8 +7,8 @@ response = re.get(url)
 data = response.json()
 print(data)
 country = data[0]
-print(country[
-          'name'])  # {'common': 'Poland', 'official': 'Republic of Poland', 'nativeName': {'pol': {'official': 'Rzeczpospolita Polska', 'common': 'Polska'}}}
+print(country['name'])
+# {'common': 'Poland', 'official': 'Republic of Poland', 'nativeName': {'pol': {'official': 'Rzeczpospolita Polska', 'common': 'Polska'}}}
 print(f"Nazwa kraju: {country['name']['common']}")  # Nazwa kraju Poland
 print(f"Stolica kraju: {country['capital'][0]}")  # Stolica kraju: Warsaw
 print(f"Liczba ludności: {country['population']}")
